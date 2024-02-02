@@ -1,0 +1,103 @@
+*{
+    cursor:url("zad3images/aim.png") 64 64, auto;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body{
+    background-image: url("zad3images/board-bg.jpg");
+    background-size: 100% 100%;
+}
+.plansza{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.serce1{
+    margin: 10px;
+    position: absolute;
+    top: 1%;
+    left: 15%;
+    background-image: url("zad3images/full_heart.png");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+.serce2{
+    margin: 10px;
+    position: absolute;
+    top: 1%;
+    left: 7.5%;
+    background-image: url("zad3images/full_heart.png");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+.serce3{
+    margin: 10px;
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    background-image: url("zad3images/full_heart.png");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+.score{
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    color: #DDDDDD;
+    height: 110px;
+    width: 250px;
+    font-size: 100px;
+    margin: 0px;
+    padding: 0px;
+    text-shadow: 4px 0 #000000, -4px 0 #000000, 0 4px #000000, 0 -4px #000000,
+    2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000;
+}
+
+
+.zombie {
+    cursor:url("zad3images/aim.png") 64 64, auto;
+    width: 200px;
+    height: 312px;
+    background: url(zad3images/walkingdead.png);
+    position: absolute;
+    left: 110%;
+    bottom: 100px; /*maks 360 */
+    animation: zombieAnim 0.5s 0s infinite steps(9), zombieWalk 10s 0s 1 linear;
+
+}
+
+@keyframes zombieAnim {
+    100% {
+        background-position: -1800px 0;
+    }
+}
+
+@keyframes zombieWalk {
+    100% {
+        left: -300px;
+    }
+}
+
+#dialog{
+    text-align: center;
+    height: 15%;
+    width: 15%;
+    margin-left:auto;
+    margin-right:auto;
+    cursor: pointer;
+}
+#dialog > p{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+#dialog > button{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
